@@ -1,0 +1,78 @@
+Mysql commands and their actions;
+
+Mysql is not case sensitive.
+To connect with mysql server: mysql -u root -p
+
+
+The SQL Keywords are case-insensitive (SELECT, FROM, WHERE, etc), but are often written in all caps. However in some setups table and column names are case-sensitive. MySQL has a configuration option to enable/disable it. Usually case-sensitive table and column names are the default on Linux MySQL and case-insensitive used to be the default on Windows, but now the installer asked about this during setup. For MSSQL it is a function of the database's collation setting.
+
+1. show databases; 
+-> will show all the databases in the system.
+
+2. create database database_Name; 
+ -> will create the database.
+
+3. drop database database_name;
+ -> will delete the database
+
+4. To create a table under any database we have to give following command first:
+  
+-> use database_Name;
+Then only we can create the tables under that database.
+-> create table table_Name(column_Name1 datatype, column_Name2 datatype, .....);
+
+5. desc table_name;
+ -> will display the fields and datatypes of the tables.
+6. To insert the values in the table column:
+
+-> insert into table_name values('column1 content', 'column2 content',....);
+
+7. SELECT * FROM TABLE_NAME; // will display all fields available in the database.
+
+8. To add and delete
+
+
+
+
+ the columns in the table;
+ -> alter table table_name
+ -> add column_Name datatype; // to add the column
+ -> drop column_Name; // will delete the column
+9. -> DROP TABLE table_name; // will delete the table from the database.
+
+10. To update the row:
+     update table_name 
+    -> set columnName='value wanted to update'
+    -> where columnName ='reference value';
+
+11. If you want to delete the row from the table:
+ -> delete from table_name where column_name='';
+12. Delete from table_Name
+  -> will delete all the data from the table
+13. To delete table from the table
+  -> drop table table_Name
+
+
+14. If you have created a table already but forget to add a column in the table you can use the following commands:
+
+-> alter table table_name
+   Add column coulumnName columntype() after existedColumnName;
+15. If you want to delete a column then use the following commands:
+-> alter table table_name
+   Drop column columnName
+
+
+
+Database 
+
+Server time error
+
+I've solved this problem by configuring MySQL.
+
+SET GLOBAL time_zone = '+3:00';
+updateProducts in the workbench will solve the error
+
+Safe mode
+ SET SQL_SAFE_UPDATES = 0;
+SET SQL_SAFE_UPDATES = 1;
+

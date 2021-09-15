@@ -1,0 +1,200 @@
+powerpoints:
+https://drive.google.com/drive/folders/1yM_Sc4QdganH_FhMwfmBMiFy2zPRBygO?usp=sharing
+
+Links for class: https://rab3tech.my.webex.com/rab3tech.my/e.php?MTID=mf9944fa72ba80a0f07cc53d96b25eee4
+
+Links for recordings: https://drive.google.com/drive/folders/1sRm_ZRRthgGyml-VNDhR3kK05zgaXQ6v?usp=sharing
+
+
+
+AWS (global cloud computing/ms/agile) 
+Amazon Web Service
+Cloud computing: storing and accessing the data through the internet.
+It does not store data on the hard disk of your personal computer. You access the data through the remote server.
+AWS: it offers the wide range of different business purpose global cloud-based products. The products includes storage, database, analytics, networking, mobile, development tools, enterprise applications, with a pay-as-you-go pricing model.
+ AWS: from Amazon offers the deployment services;
+ Pay--> virtual service only while it runs.
+ 
+
+1. Compute
+2. Migration
+3. Security
+4. Storage (s3)--> Simple Storage Service
+5. Networking
+6. Messaging
+7. Database
+8. Management Tool
+9. Analytics
+
+Why AWS:
+Allows the organizations to use the already familiar programming models, os, database, and architecture
+Quickly and securely host your application
+Cost effective--> pay only what you use
+Offers fast deployment
+Can add and remove the capacity
+Allowed cloud access quickly with limitless capacity
+Total cost of the ownership is very low compared to any private/dedicated servers
+Offers centralized billing And management
+Allows to deploy your application in multiple regions around the world with just a few clicks
+
+Benefits:
+GO Global in minutes
+
+Architecture: 19 geographical regions. 50 Availability Zones
+
+Product & Services
+Compute Services;
+EC2, Auto Scaling, Elastic Load Balancing
+
+VPC(Virtual private Cloud)
+Storage Service: Amazone EBS, S3, Glacier, 
+Database Services: RDS
+Deployment and Administration: CloudWatch IAM, CloudFormation
+Application Service: 
+
+
+VPC?
+
+VPC
+10.0.0.0/26
+IPv= 4Blocks
+1 Byte =8 bits
+How many IP address: 32-26=6
+2^6=64
+
+
+Public subnet: the resources are directly accessible through the internet by the end users
+Private Subnet: the resources are not not connected with the internet
+Public-1a Subnet-10.0.0.0/28
+How many IP address: 2^(32-28)=2^4=16
+Public-1b Subnet- 10.0.0.16/28
+
+Private-1a Subnet= 10.0.0.32/28
+Private-1b Subnet= 10.0.0.48/28
+
+Subnet Routing:
+Route Table: 
+
+Inbound traffic: traffic coming from the users to the website(web application or web server)
+Outbound Traffic: response coming back to the end users from the websites
+
+
+Target: 
+To make the Subnet a public Subnet, we need to add the route from everywhere to the "internet gateway"
+As target. So that the public subnet resources can be accessible from outside/ internet
+
+
+
+EC2
+
+How to make instance:
+Choose AMI
+Choose instance Type
+Configure instance:
+   * choose Network(VPS) and subnet
+   * Auto-assign Public IP --> enabled
+Add Storage:(Amazon EBS volume) 30 gb is free for tire offer
+   Different types of the volume
+   We create the instance in the particular region in the specific availability zone
+   
+
+Add tags
+Configure Security Group:
+  Type: RDP(window) port range: 3389 Source: there are three
+
+
+Key pairs:
+Public and private
+
+Decrypted Password: iaV)oQ?WKp6IJu=UsC(Ph;pa$qKusOE* 
+IP address: 54.193.53.37
+Administrator
+
+
+
+Creating the window os instance in Public Subnet:
+We we make the instance in the public subnet there is the direct connection with the internet
+
+Creating EC2 instance in the private subnet:
+Public IP	54.153.108.143
+User name	Administrator
+Password	         MZTJtW83KF2h2puBtnG66N5nuT@VRoaW
+
+Private Desktop can not connect to the remote computer because of the internet because of the EC2 instance is created in the Private subnet
+
+We couldn't connect to the remote PC. Make sure the PC is turned on and connected to the network, and that remote access is enabled.
+
+We we need to go to the instance created on the public subnet and then access the EC2 instance from that. 
+
+
+
+
+
+
+
+
+
+iaV)oQ?WKp6IJu=UsC(Ph;pa$qKusOE*
+
+
+1. Lunching EC2 instance in window Os in public subnet
+    We are able to access that instance directly from the internet
+2. Lunching EC2 instance in window os in private subnet
+    We are not able to access that instance directly form the internet. For that we need to log in the public instance and using the private ips of private instance we can log in the private instance.
+   And there is no internet connectivity in the private instance.
+  
+
+ How to get internet connectivity in the private instance:
+  If we are not adding route to Internet gateway in any route table, so every subnet associated with, can be seen as a private Subnet. But to have an internet connectivity for the resource inside private subnet, we add a route target to NAT instance
+
+We need to create the NETGET Way in the public subnet and we need to add route in the private route table.
+
+NAT getaway acts like the bridge between the internet gateway and the public subnet
+
+Public:
+iaV)oQ?WKp6IJu=UsC(Ph;pa$qKusOE*
+iaV)oQ?WKp6IJu=UsC(Ph;pa$qKusOE* 
+
+Private:
+Administrator
+MZTJtW83KF2h2puBtnG66N5nuT@VRoaW
+
+MZTJtW83KF2h2puBtnG66N5nuT@VRoaW
+MZTJtW83KF2h2puBtnG66N5nuT@VRoaW
+
+MZTJtW83KF2h2puBtnG66N5nuT@VRoaW
+
+
+How to connect to unix
+Cd Downloads/.  --> to go to the download 
+chmod 400 FirstKey.pem
+Then 
+ssh -i "FirstKey.pem" ec2-user@3.228.14.135
+
+
+To go to the root user
+[ec2-user@ip-10-0-0-12 ~]$ sudo su
+[root@ip-10-0-0-12 ec2-user]# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+VPC: Virtual Private Cloud
+
+EC2: Elastic Compute Cloud
+
+SNS--> Simple Notification Service
+
+CloudWatch--> can create the alarm for the billing
+
+IAM--> Identity Access Management
+
+IAM Policy--> Documents that defines permissions and can be applied to users, groups, and roles
+
+IAM User--> entity that represents a person or service
+
+IAM Group--> Collections of users and have polices attached to them
+
+IAM Role--> Assumed by trusted entities and can be used for delegation
+
+
+IAM:
+   You can create multiple VCPs within each region 
+   VCP: each VCP has a different block of IP addresses
+   CIDR: Classless InterDomain Routing
+   /var/folders/jx/rtbdx6nd47nbdzk6nbxy6qy40000gn/T/TemporaryItems/NSIRD_screencaptureui_8FZene/Screen Shot 2021-05-26 at 11.28.58 PM.png
+   subnet: inside availability Zone
+         : private
+         : public
+
+Each subnet has a block of IP addresses from the CDIR block
